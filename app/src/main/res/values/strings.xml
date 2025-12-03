@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Daily Cytato</string>
+    
+    <!-- Login -->
+    <string name="login_title">Zaloguj się</string>
+    <string name="login_description">Codziennie nowa dawka inspiracji</string>
+    <string name="login_google">Zaloguj się przez Google</string>
+    <string name="login_privacy">Logując się wyrażasz zgodę na przetwarzanie danych zgodnie z polityką prywatności</string>
+    
+    <!-- Main -->
+    <string name="quote_loading">Ładowanie cytatu...</string>
+    <string name="refresh_quote">Nowy cytat</string>
+    <string name="quote_error">Błąd ładowania cytatu</string>
+    
+    <!-- Account -->
+    <string name="account_title">Konto</string>
+    <string name="account_preferences">Preferencje kategorii</string>
+    <string name="account_notifications">Ustawienia powiadomień</string>
+    <string name="account_sign_out">Wyloguj się</string>
+    <string name="account_created">Konto utworzone:</string>
+    <string name="selected_categories">Wybrane kategorie:</string>
+    <string name="no_categories">Brak wybranych kategorii</string>
+    
+    <!-- Preferences -->
+    <string name="preferences_title">Preferencje kategorii</string>
+    <string name="preferences_description">Wybrane kategorie będą używane do personalizacji cytatów</string>
+    <string name="preferences_save">Zapisz preferencje</string>
+    <string name="preferences_saved">Preferencje zapisane!</string>
+    <string name="save_preferences">Zapisz</string>
+    <string name="user_profile_picture">Zdjęcie profilowe</string>
+    
+    <!-- Widget -->
+    <string name="widget_description">Cytat dnia na ekranie głównym</string>
+    <string name="widget_default_text">Dotknij aby załadować cytat dnia</string>
+    <string name="widget_refresh">Odśwież cytat</string>
+    
+    <!-- Navigation -->
+    <string name="title_home">Główna</string>
+    <string name="title_dashboard">Pulpit</string>
+    <string name="title_notifications">Powiadomienia</string>
+    
+    <!-- Menu -->
+    <string name="menu_account">Konto</string>
+    <string name="menu_preferences">Preferencje</string>
+    
+    <!-- Notifications -->
+    <string name="notification_title">Cytat dnia</string>
+    <string name="notification_channel_name">Codzienne cytaty</string>
+    <string name="notification_channel_description">Powiadomienia z codziennymi cytatami</string>
+    
+    <!-- Firebase -->
+    <string name="default_web_client_id">YOUR_GOOGLE_SIGN_IN_CLIENT_ID_HERE</string>
+    
+    <!-- Error messages -->
+    <string name="error_network">Sprawdź połączenie z internetem</string>
+    <string name="error_login">Błąd logowania</string>
+    <string name="error_save">Nie udało się zapisać</string>
+    <string name="error_load">Nie udało się załadować danych</string>
+    
+    <!-- Content descriptions -->
+    <string name="cd_logo">Logo aplikacji</string>
+    <string name="cd_avatar">Avatar użytkownika</string>
+    <string name="cd_refresh">Odśwież</string>
+    <string name="cd_back">Wstecz</string>
+    <string name="cd_settings">Ustawienia</string>
+</resources>

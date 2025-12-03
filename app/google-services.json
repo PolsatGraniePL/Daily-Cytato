@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "508544425599",
+    "project_id": "daily-cytato",
+    "storage_bucket": "daily-cytato.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508544425599:android:64d23f63153fa51c23694a",
+        "android_client_info": {
+          "package_name": "pl.polsatgranie.dailycytato"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "508544425599-5kgetl61kn8amdkup52ianl217843nfg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pl.polsatgranie.dailycytato",
+            "certificate_hash": "60067f3ed215552e03794a0ac2b3c2f4e1329313"
+          }
+        },
+        {
+          "client_id": "508544425599-gcuu0mnm772q1c9upk92cnaerr3g3d0n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmy_ScfJe_adU0CfikgadbX5QsW7u98jE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "508544425599-gcuu0mnm772q1c9upk92cnaerr3g3d0n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

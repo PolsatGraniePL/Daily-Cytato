@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@color/background_light">
+
+    <!-- Logo aplikacji -->
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/ic_quote_logo"
+        android:contentDescription="Logo Daily Cytato" />
+
+    <!-- Tytuł aplikacji -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily Cytato"
+        android:textSize="32sp"
+        android:textColor="@color/primary_text"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Opis aplikacji -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Codziennie nowa dawka inspiracji"
+        android:textSize="16sp"
+        android:textColor="@color/secondary_text"
+        android:layout_marginBottom="48dp"
+        android:gravity="center" />
+
+    <!-- Przycisk logowania Google -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_google_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Zaloguj się przez Google"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        app:icon="@drawable/ic_google"
+        app:iconSize="24dp"
+        app:iconGravity="textStart"
+        app:cornerRadius="8dp"
+        style="@style/Widget.Material3.Button.Icon" />
+
+    <!-- Progress bar -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" />
+
+    <!-- Informacja o prywatności -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logując się wyrażasz zgodę na przetwarzanie danych zgodnie z polityką prywatności"
+        android:textSize="12sp"
+        android:textColor="@color/secondary_text"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:alpha="0.7" />
+
+</LinearLayout>
