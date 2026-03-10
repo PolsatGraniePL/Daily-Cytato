@@ -68,7 +68,8 @@ dependencies {
     // Fragment & Activity KTX
     implementation("androidx.fragment:fragment-ktx:1.6.2")
     implementation("androidx.activity:activity-ktx:1.8.2")
-    
+    implementation(libs.androidx.mediarouter)
+
     // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
