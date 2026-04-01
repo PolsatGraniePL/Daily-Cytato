@@ -1,1 +1,1 @@
-Projekt na zaliczenie aplikacji webowych
+Projekt na zaliczenie aplikacji mobilnych
