@@ -40,42 +40,49 @@ class QuoteRepository(private val context: Context) {
     suspend fun getRandomQuote(tags: List<String>? = null): Quote? {
         return try {
             Log.d(TAG, "getRandomQuote: Rozpoczynam pobieranie cytatu. Tags: $tags")
-            
-            if (!tags.isNullOrEmpty()) {
-                Log.d(TAG, "getRandomQuote: Pobieram cytat z tagiem: ${tags.first()}")
-                val response = quoteApi.getQuotesByTag(tags.first())
-                
-                Log.d(TAG, "getRandomQuote: Response code: ${response.code()}, isSuccessful: ${response.isSuccessful}")
-                Log.d(TAG, "getRandomQuote: Response body: ${response.body()}")
-                
-                if (response.isSuccessful && !response.body().isNullOrEmpty()) {
-                    val quote = response.body()!!.random() // Losowy cytat z listy
-                    Log.d(TAG, "getRandomQuote: Sukces! Otrzymano cytat: ${quote.content}")
-                    quote
-                } else {
-                    Log.e(TAG, "getRandomQuote: Response error: ${response.errorBody()?.string()}")
-                    null
-                }
-            } else {
-                Log.d(TAG, "getRandomQuote: Pobieram losowy cytat (bez tagów)")
-                val response = quoteApi.getRandomQuote()
-                
-                Log.d(TAG, "getRandomQuote: Response code: ${response.code()}, isSuccessful: ${response.isSuccessful}")
-                Log.d(TAG, "getRandomQuote: Response body: ${response.body()}")
-                
-                if (response.isSuccessful && response.body() != null) {
-                    val quote = response.body()!!
-                    Log.d(TAG, "getRandomQuote: Sukces! Otrzymano cytat: ${quote.content}")
-                    quote
-                } else {
-                    Log.e(TAG, "getRandomQuote: Response error: ${response.errorBody()?.string()}")
-                    null
-                }
-            }
+
+            //            if (!tags.isNullOrEmpty()) {
+            Log.d(TAG, "getRandomQuote: Pobieram cytat z tagiem: ${tags?.first()}")
+    //                val response = quoteApi.getQuotesByTag(tags.first())
+            val response = quoteApi.getRandomQuote()
+
+            Log.d(TAG, "getRandomQuote: Response code: ${response.code()}, isSuccessful: ${response.isSuccessful}")
+            Log.d(TAG, "getRandomQuote: Response body: ${response.body()}")
+
+            val quote = response.body()?.quotes?.random()
+
+//            val q2ote = quote.(Quote::class.java)
+
+            quote
+    //                if (response.isSuccessful && !response.body().isNullOrEmpty()) {
+    //                    val quote = response.body()!!.random() // Losowy cytat z listy
+    //                    Log.d(TAG, "getRandomQuote: Sukces! Otrzymano cytat: ${quote.content}")
+    //                    quote
+    //                } else {
+    //                    Log.e(TAG, "getRandomQuote: Response error: ${response.errorBody()?.string()}")
+    //                    null
+    //                }
+    //            } else {
+    //                Log.d(TAG, "getRandomQuote: Pobieram losowy cytat (bez tagów)")
+    //                val response = quoteApi.getRandomQuote()
+    //
+    //                Log.d(TAG, "getRandomQuote: Response code: ${response.code()}, isSuccessful: ${response.isSuccessful}")
+    //                Log.d(TAG, "getRandomQuote: Response body: ${response.body()}")
+    //
+    ////                if (response.isSuccessful && response.body() != null) {
+    ////                    val quote = response.body()!!
+    ////                    Log.d(TAG, "getRandomQuote: Sukces! Otrzymano cytat: ${quote.content}")
+    ////                    quote
+    ////                } else {
+    ////                    Log.e(TAG, "getRandomQuote: Response error: ${response.errorBody()?.string()}")
+    ////                    null
+    ////                }
+    //                null
+    //            }
         } catch (e: Exception) {
             Log.e(TAG, "getRandomQuote: Wyjątek podczas pobierania cytatu", e)
             null
-        }
+        } as Quote?
     }
     
     // User management

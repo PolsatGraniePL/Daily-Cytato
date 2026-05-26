@@ -15,8 +15,19 @@ interface QuoteApiService {
     /**
      * Pobiera losowy cytat
      * API zwraca pojedynczy obiekt JSON
+     * {
+     *   "quotes": [
+     *     {
+     *       "id": 1,
+     *       "quote": "Your heart is the size of an ocean. Go find yourself in its hidden depths.",
+     *       "author": "Rumi"
+     *     }
+     * }
+     *
      */
-    @GET("random")
+//    @GET("random")
+//    suspend fun getRandomQuote(): Response<QuoteResponse>
+    @GET("quotes")
     suspend fun getRandomQuote(): Response<QuoteResponse>
     
     /**
@@ -62,6 +73,7 @@ interface QuoteApiService {
     suspend fun getAvailableAuthors(): Response<List<String>>
     
     companion object {
-        const val BASE_URL = "https://api.quotify.top/"
+//        const val BASE_URL = "https://api.quotify.top/"
+        const val BASE_URL = "https://dummyjson.com/"
     }
 }
